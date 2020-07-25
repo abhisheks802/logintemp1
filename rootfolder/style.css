@@ -1,0 +1,111 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: 'Satisfy', cursive;
+}
+#loading{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: black url("loading.gif") no-repeat center;
+    z-index: 20;
+}
+.main{
+    height: 100vh;
+    background: rgba(0,0,0,0.4) url("bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+}
+h2{
+    text-align: center;
+    font-size: 30px;
+    padding: 0 2vh 0 2vh;
+    cursor: pointer;
+}
+.content,.inputs,.register{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.register{
+    background: rgba(255,255,255,0.6);
+    margin-top: 15vh;
+    height: 65vh;
+    width: 80vw;
+    max-width: 400px;
+    overflow: hidden;
+    border-radius: 10px;
+    position: absolute;
+}
+input{
+    margin: 1vh auto;
+    height: 5vh;
+    border: none;
+    padding: 2vh;
+    background: transparent;
+}
+input::placeholder{
+    color: rgba(0,0,0,0.75);
+}
+.inputs{
+    margin-top: -2vh;
+    margin-bottom: 3.5vh;
+}
+.inputs input{
+    border-bottom: 1px solid black;
+}
+.submit{
+    height: 40px;
+    width: 150px;
+    margin-bottom: 5vh;
+    border: none;
+    font-size: 17px;
+    border-radius: 20px;
+    background: linear-gradient(to right, dodgerblue, deepskyblue);
+}
+.reg-input, #sign-in{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.r-s{
+    display: flex;
+}
+#reg{
+    border-right: 1px solid black;
+}
+#sign{
+    opacity: 0.4;
+}
+.sign-input{
+    margin-top: 4vh;
+}
+.sign-input input, .sign-input button{
+    display: none;
+}
+input:focus, button:focus{
+    outline: none;
+}
+button{
+    cursor: pointer;
+}
+li{
+    list-style: none;
+    padding: 10px;
+}
+.social{
+    display: flex;
+    align-items: center;
+    margin-top: -1.8vh;
+    margin-right: 5.8vh;
+}
+.social-box{
+    display: none;
+}

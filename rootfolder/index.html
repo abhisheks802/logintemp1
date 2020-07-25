@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <script src="jquery-compressed.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body onload="load()">
+<div id="loading"></div>
+<div class="main">
+<div class="content">
+    <div class="register">
+      <div class="r-s">
+        <h2 id="reg">Register</h2>
+        <h2 id="sign">Login</h2>
+      </div>
+       <div class="reg-input" id="reg-input">
+        <div class="inputs">
+            <input type="text" placeholder="Name">
+            <input type="text" placeholder="Username">
+            <input type="text" placeholder="email">
+            <input type="password" placeholder="Password">
+            <input type="password" placeholder="Confirm Password">
+        </div>
+        <button class="submit" id="submit1">Sign Up</button>
+        </div>
+       <div class="sign-input" id="sign-in">
+        <div class="inputs">
+            <input type="text" placeholder="Username">
+            <input type="password" placeholder="Password">
+        </div>
+        <div class="social-box">
+            <ul class="social">
+                <li><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></li>
+                <li><i class="fa fa-github fa-lg" aria-hidden="true"></i></li>
+                <li><i class="fa fa-instagram fa-lg" aria-hidden="true"></i></li>
+            </ul>
+        </div>
+        <button class="submit" id="submit2">Sign In</button>
+        </div>
+    </div>
+</div>
+</div>
+</body>
+<script>
+    var preloader = document.getElementById("loading");
+    function load() {
+        preloader.style.display = 'none';
+    }
+    $(document).ready(function () {
+        var windowHeight = $(window).innerHeight();
+        $('body').css({'height':windowHeight});
+        $("#sign, #submit1").click(function () {
+            $("#reg-input").hide();
+            $(".sign-input input, .sign-input button, .social-box").show();
+            $("#sign").css("opacity","1");
+            $("#reg").css("opacity","0.4");
+        });
+        $("#reg, #submit2").click(function () {
+            $("#reg-input").show();
+            $(".sign-input input, .sign-input button, .social-box").hide();
+            $("#reg").css("opacity","1");
+            $("#sign").css("opacity","0.4");
+        })
+    })
+</script>
+</html>
